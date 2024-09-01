@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="420" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment03_221071032.FXMLDocumentController">
+     <children>
+        <Label layoutX="50" layoutY="30" text="Username:" />
+        <TextField layoutX="150" layoutY="30" fx:id="usernameField" />
+
+        <Label layoutX="50" layoutY="70" text="Password:" />
+        <PasswordField layoutX="150" layoutY="70" fx:id="passwordField" />
+
+        <Label layoutX="50" layoutY="110" text="Gender:" />
+        <RadioButton layoutX="150" layoutY="110" text="Male" fx:id="maleRadioButton">
+        <toggleGroup>
+            <ToggleGroup fx:id="genderGroup" />
+        </toggleGroup>
+        </RadioButton>
+        <RadioButton layoutX="210" layoutY="110" text="Female" toggleGroup="$genderGroup" fx:id="femaleRadioButton" />
+        <RadioButton layoutX="280" layoutY="110" text="Other" toggleGroup="$genderGroup" fx:id="otherRadioButton" />
+
+        <Button layoutX="150" layoutY="150" text="Submit" onAction="#handleButtonAction" fx:id="submitButton" />
+
+    </children>
+</AnchorPane>
